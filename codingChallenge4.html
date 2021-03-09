@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Mark = {
+            fullName: "Mark Markson",
+            mass: 78,
+            heigth: 1.65,
+            bmiFunction: function () {
+               this.bmi = this.mass / Math.pow(this.heigth, 2);
+            }
+          
+        }
+        Mark.bmiFunction()
+        console.log(Mark.bmi)
+  
+ 
+        var John = {
+            fullName: "John Johnson",
+            mass: 92,
+            heigth: 1.92,
+            bmiFunction: function () {
+                this.bmi = this.mass / Math.pow(this.heigth, 2);
+                return this.bmi
+            }
+        }
+        John.bmiFunction();
+        console.log(John.bmi)
+
+        if (Mark.bmi > John.bmi) {
+            console.log(Mark.fullName + " is bigger with a BMI of " + Mark.bmi);
+        } else if (John.bmi > Mark.bmi) {
+            console.log(John.fullName + " is bigger with a BMI of " + John.bmi);
+        } else {
+            console.log("Its a draw");
+        }
+        
+    </script>
+</body>
+
+</html>

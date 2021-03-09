@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var johnAverage = (89 + 120 + 103) / 3;
+        var mikeAverage = (116 + 94 + 123) / 3;
+        var maryAverage = (97 + 134 + 105) / 3;
+
+        console.log(johnAverage)
+        console.log(mikeAverage)
+        console.log(maryAverage)
+
+        if (johnAverage > mikeAverage && maryAverage < johnAverage) {
+            console.log("John won with " + johnAverage)
+        } else if (mikeAverage > johnAverage && maryAverage < mikeAverage) {
+            console.log("Mike won with " + mikeAverage)
+        } else if (maryAverage > johnAverage && mikeAverage < maryAverage) {
+            console.log("Mary won with ", maryAverage)
+        } else if (johnAverage === mikeAverage || johnAverage === maryAverage) {
+            console.log("it's a draw ");
+        } else if (mikeAverage === maryAverage) {
+            console.log("it's a draw ")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

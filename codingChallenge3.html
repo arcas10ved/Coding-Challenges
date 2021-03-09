@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tip = 0;
+
+        function tipCalculator(bill) {
+            if (bill < 50) {
+                return tip = (bill * 0.2);
+            } else if (bill >= 50 || bill < 200) {
+                return tip =(bill * 0.15);
+            } else {
+               return tip = (bill * 0.10);
+            }
+        }
+
+        var bills=[124,48,268];
+        var tipArray = [tipCalculator(124),tipCalculator(48),tipCalculator(268)];
+        // var tipArrayAndBill = [tipCalculator(124)+" tip and bill of 123 ,"+ tipCalculator(48)+" tip and bill of 48 ,"+tipCalculator(268)+" tip and bill of 268 "]
+        var tipArrayAndBill=[bills[0]+tipArray[0],bills[1]+tipArray[1],bills[2]+tipArray[2]]
+
+        console.log(tipArray);
+        console.log(tipArrayAndBill);
+        
+
+
+    </script>
+</body>
+
+</html>

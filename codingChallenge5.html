@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var tip = [];
+        var finalSum = [];
+        var percentage;
+        var sum;
+        var average1;
+        var john = {
+
+            bills: [124, 48, 268, 180, 42],
+            tipCalc: function (bills) {
+                for (var i = 0; i < this.bills.length; i++) {
+                    if (this.bills[i] < 50) {
+                        percentage = 0.2;
+                        tip.push(this.bills[i] * percentage)
+                    } else if (this.bills[i] >= 50 && this.bills[i] <= 200) {
+                        percentage = 0.15;
+                        tip.push(this.bills[i] * percentage)
+
+                    } else {
+                        percentage = 0.10;
+                        tip.push(this.bills[i] * percentage)
+
+
+                    }
+
+                }
+                finalSum.push(tip + " & " + john.bills)
+            }
+
+        }
+
+
+        john.tipCalc();
+        console.log(tip)
+        console.log(finalSum)
+
+        sum = tip.reduce(myFunc)
+        console.log(sum)
+        average1 = sum / tip.length
+        console.log(average1)
+
+
+
+        function myFunc(total, num) {
+            return total + num;
+        }
+        var percentage1;
+        var tips1 = [];
+        var average;
+        var sum2;
+        var mark = {
+            bills: [77, 375, 119, 45],
+
+        }
+        function calcTip() {
+            for (var i = 0; i < mark.bills.length; i++) {
+                if (mark.bills[i] < 100) {
+                    percentage1 = .2;
+                    tips1.push(mark.bills[i] * percentage1);
+
+
+                } else if (mark.bills[i] >= 100 && mark.bills[i] <= 300) {
+                    percentage1 = .1;
+                    tips1.push(mark.bills[i] * percentage1);
+                } else {
+                    percentage = .25;
+                    tips1.push(mark.bills[i] * percentage1);
+                }
+
+            }
+
+        }
+        calcTip();
+        sum2 = tips1.reduce(myFunc)
+        console.log(tips1)
+
+        console.log(sum2);
+
+        average = sum2 / tips1.length;
+        console.log(average)
+
+        if (average1 > average) {
+            console.log("John payed the highest")
+        } else {
+            console.log("Mark payed the highest")
+        }
+    </script>
+</body>
+
+</html>
